@@ -17,6 +17,7 @@ const HeroSection: React.FC = () => {
             data-testid="Name"
             className="text-4xl sm:text-6xl font-bold dark:text-gray-50 text-gray-900"
           >
+
             Hi, I’m {name} 👋
           </h1>
           <p
