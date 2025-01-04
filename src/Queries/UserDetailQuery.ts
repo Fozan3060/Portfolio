@@ -6,7 +6,16 @@ export const useUserDetails = () => {
       sanityUserDetails {
         name
         description
-        detailedDescription {
+        Experience {
+      _key
+      _type
+      CompanyName
+      PositionName
+      Description
+      StartDate
+      EndDate
+    }
+      detailedDescription {
           _key
           _type
           style
@@ -38,6 +47,15 @@ export const useUserDetails = () => {
         name
         _rawImage
       }
+      work {
+       _key
+       _type
+       name
+       skills
+       description
+       ProjectUrl
+       _rawProjectImage
+     }
       }
     }
   `);
