@@ -7,15 +7,36 @@ interface skill {
     name: string;
     _rawImage: {
         asset: {
-            _ref:string
+            _ref: string
         }
     }
+}
+interface experience {
+    CompanyName: string;
+    PositionName: string;
+    Description: string;
+    StartDate: string;
+    EndDate: string;
+}
+interface SanityImage {
+    asset: {
+        _ref: string; 
+    };
+}
+
+interface WorkItem {
+    name: string;
+    description: string;
+    ProjectUrl: string;
+    _rawProjectImage: SanityImage;
+    skills:string[]
 }
 interface SanityUserDetails {
     name: string;
     description: string;
     detailedDescription: any[];
     location: string;
+    Experience: experience[];
     availability: boolean;
     githubLink: string;
     linkedinLink: string;
@@ -27,6 +48,7 @@ interface SanityUserDetails {
     cvDocument: {
         asset: SanityAsset;
     };
+    work: WorkItem[];
 }
 
 interface UserDetailsContextProps {
